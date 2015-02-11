@@ -1,3 +1,16 @@
+
+================
+ Slaaysourcecoders forked this app from Github and it carries the same license as the original license.
+
+ The app is renamed as DrwApp (say it as "Drop")
+
+
+
+
+================
+
+
+Below is the original license text
 DAScratchPad
 =======================
 
