@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DAViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *btnBlack;
+@property (strong, nonatomic) IBOutlet UIButton *btnRed;
+@property (strong, nonatomic) IBOutlet UIButton *btnBlue;
+@property (strong, nonatomic) IBOutlet UIButton *btnGreen;
+@property (strong, nonatomic) IBOutlet UIButton *btnYellow;
 
 @end

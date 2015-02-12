@@ -28,6 +28,8 @@
 		4CA49E3C1759439000380086 /* DAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA49E3B1759439000380086 /* DAViewController.m */; };
 		4CA49E4B175943D200380086 /* DAScratchPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA49E4A175943D200380086 /* DAScratchPadView.m */; };
 		4CA49E76175BD59800380086 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA49E75175BD59800380086 /* QuartzCore.framework */; };
+		8A4683931A8D1CCE00A81A3C /* eraser2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683911A8D1CCE00A81A3C /* eraser2.png */; };
+		8A4683941A8D1CCE00A81A3C /* eraser11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683921A8D1CCE00A81A3C /* eraser11.png */; };
 		8AFCDBF31A8BCB5F00C8D8E0 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +61,9 @@
 		4CA49E49175943D200380086 /* DAScratchPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAScratchPadView.h; sourceTree = "<group>"; };
 		4CA49E4A175943D200380086 /* DAScratchPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAScratchPadView.m; sourceTree = "<group>"; };
 		4CA49E75175BD59800380086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = main.storyboard; path = DAScratchPadExample/main.storyboard; sourceTree = "<group>"; };
+		8A4683911A8D1CCE00A81A3C /* eraser2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser2.png; sourceTree = "<group>"; };
+		8A4683921A8D1CCE00A81A3C /* eraser11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser11.png; sourceTree = "<group>"; };
+		8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,8 @@
 		4CA49E161759439000380086 = {
 			isa = PBXGroup;
 			children = (
-				8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */,
+				8A4683911A8D1CCE00A81A3C /* eraser2.png */,
+				8A4683921A8D1CCE00A81A3C /* eraser11.png */,
 				4CA49E48175943D200380086 /* DAScratchPad */,
 				4CA49E281759439000380086 /* DrwApp */,
 				4CA49E211759439000380086 /* Frameworks */,
@@ -112,6 +117,7 @@
 		4CA49E281759439000380086 /* DrwApp */ = {
 			isa = PBXGroup;
 			children = (
+				8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */,
 				4CA49E311759439000380086 /* DAAppDelegate.h */,
 				4CA49E321759439000380086 /* DAAppDelegate.m */,
 				4CA49E3A1759439000380086 /* DAViewController.h */,
@@ -208,6 +214,8 @@
 			files = (
 				4C6E428C18E1FC22001EFA49 /* ETleft.jpg in Resources */,
 				4C6E428D18E1FC22001EFA49 /* ETleftMirrored.jpg in Resources */,
+				8A4683941A8D1CCE00A81A3C /* eraser11.png in Resources */,
+				8A4683931A8D1CCE00A81A3C /* eraser2.png in Resources */,
 				4C6E428A18E1FC22001EFA49 /* ETright.jpg in Resources */,
 				4CA49E2D1759439000380086 /* InfoPlist.strings in Resources */,
 				4C6E428818E1FC22001EFA49 /* ETdown.jpg in Resources */,

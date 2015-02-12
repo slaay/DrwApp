@@ -40,6 +40,38 @@
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 		self.airbrushFlowSlider.transform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(-M_PI/2.0f), -30.0f, -35.0f);
 	}
+    
+    
+    
+    
+    
+    
+    self.btnBlack.layer.cornerRadius = self.btnBlack.frame.size.width / 2;
+    self.btnBlack.clipsToBounds = YES;
+    self.btnBlack.layer.borderWidth = 1.0f;
+    self.btnBlack.layer.borderColor = [UIColor greenColor].CGColor;
+    
+    self.btnBlue.layer.cornerRadius = self.btnBlue.frame.size.width / 2;
+    self.btnBlue.clipsToBounds = YES;
+    self.btnBlue.layer.borderWidth = 1.0f;
+    self.btnBlue.layer.borderColor = [UIColor greenColor].CGColor;
+    
+    
+    self.btnGreen.layer.cornerRadius = self.btnGreen.frame.size.width / 2;
+    self.btnGreen.clipsToBounds = YES;
+    self.btnGreen.layer.borderWidth = 1.0f;
+    self.btnGreen.layer.borderColor = [UIColor greenColor].CGColor;
+    
+    
+    self.btnRed.layer.cornerRadius = self.btnRed.frame.size.width / 2;
+    self.btnRed.clipsToBounds = YES;
+    self.btnRed.layer.borderWidth = 1.0f;
+    self.btnRed.layer.borderColor = [UIColor greenColor].CGColor;
+    
+    self.btnYellow.layer.cornerRadius = self.btnYellow.frame.size.width / 2;
+    self.btnYellow.clipsToBounds = YES;
+    self.btnYellow.layer.borderWidth = 1.0f;
+    self.btnYellow.layer.borderColor = [UIColor greenColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning
