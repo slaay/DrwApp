@@ -30,6 +30,7 @@
 		4CA49E76175BD59800380086 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA49E75175BD59800380086 /* QuartzCore.framework */; };
 		8A4683931A8D1CCE00A81A3C /* eraser2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683911A8D1CCE00A81A3C /* eraser2.png */; };
 		8A4683941A8D1CCE00A81A3C /* eraser11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683921A8D1CCE00A81A3C /* eraser11.png */; };
+		8AD1AAF61A925B5900AE50AC /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1AAF51A925B5900AE50AC /* DWBubbleMenuButton.m */; };
 		8AFCDBF31A8BCB5F00C8D8E0 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		4CA49E75175BD59800380086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A4683911A8D1CCE00A81A3C /* eraser2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser2.png; sourceTree = "<group>"; };
 		8A4683921A8D1CCE00A81A3C /* eraser11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser11.png; sourceTree = "<group>"; };
+		8AD1AAF41A925B5900AE50AC /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
+		8AD1AAF51A925B5900AE50AC /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
 		8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,7 @@
 		4CA49E281759439000380086 /* DrwApp */ = {
 			isa = PBXGroup;
 			children = (
+				8A5A21261A8E719A00840611 /* Libraries */,
 				8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */,
 				4CA49E311759439000380086 /* DAAppDelegate.h */,
 				4CA49E321759439000380086 /* DAAppDelegate.m */,
@@ -158,6 +162,23 @@
 			);
 			name = DAScratchPad;
 			path = ../DAScratchPad;
+			sourceTree = "<group>";
+		};
+		8A5A21261A8E719A00840611 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1AAF31A925B4C00AE50AC /* BubbleMenuButton */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		8AD1AAF31A925B4C00AE50AC /* BubbleMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1AAF41A925B5900AE50AC /* DWBubbleMenuButton.h */,
+				8AD1AAF51A925B5900AE50AC /* DWBubbleMenuButton.m */,
+			);
+			name = BubbleMenuButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD1AAF61A925B5900AE50AC /* DWBubbleMenuButton.m in Sources */,
 				4CA49E2F1759439000380086 /* main.m in Sources */,
 				4CA49E331759439000380086 /* DAAppDelegate.m in Sources */,
 				4CA49E3C1759439000380086 /* DAViewController.m in Sources */,

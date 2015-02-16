@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnBlue;
 @property (strong, nonatomic) IBOutlet UIButton *btnGreen;
 @property (strong, nonatomic) IBOutlet UIButton *btnYellow;
+@property (strong, nonatomic) IBOutlet UIButton *btnClearDrawing;
 
 @end
