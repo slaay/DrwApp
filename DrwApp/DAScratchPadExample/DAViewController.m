@@ -38,42 +38,13 @@
 {
     [super viewDidLoad];
     
-  
-    
-    self.btnBlack.layer.cornerRadius = self.btnBlack.frame.size.width / 2;
-    self.btnBlack.clipsToBounds = YES;
-    self.btnBlack.layer.borderWidth = 1.0f;
-    self.btnBlack.layer.borderColor = [UIColor greenColor].CGColor;
-    
-    self.btnBlue.layer.cornerRadius = self.btnBlue.frame.size.width / 2;
-    self.btnBlue.clipsToBounds = YES;
-    self.btnBlue.layer.borderWidth = 1.0f;
-    self.btnBlue.layer.borderColor = [UIColor greenColor].CGColor;
-    
-    
-    self.btnGreen.layer.cornerRadius = self.btnGreen.frame.size.width / 2;
-    self.btnGreen.clipsToBounds = YES;
-    self.btnGreen.layer.borderWidth = 1.0f;
-    self.btnGreen.layer.borderColor = [UIColor greenColor].CGColor;
-    
-    
-    self.btnRed.layer.cornerRadius = self.btnRed.frame.size.width / 2;
-    self.btnRed.clipsToBounds = YES;
-    self.btnRed.layer.borderWidth = 1.0f;
-    self.btnRed.layer.borderColor = [UIColor greenColor].CGColor;
-    
-    self.btnYellow.layer.cornerRadius = self.btnYellow.frame.size.width / 2;
-    self.btnYellow.clipsToBounds = YES;
-    self.btnYellow.layer.borderWidth = 1.0f;
-    self.btnYellow.layer.borderColor = [UIColor greenColor].CGColor;
-    
-    self.btnClearDrawing.layer.cornerRadius = self.btnClearDrawing.frame.size.width / 2;
-    self.btnClearDrawing.clipsToBounds = YES;
-    self.btnClearDrawing.layer.borderWidth = 1.0f;
-    self.btnClearDrawing.layer.borderColor = [UIColor greenColor].CGColor;
-    
-    
-    
+ 
+    [self roundedControls:_btnBlack];
+    [self roundedControls:_btnGreen];
+    [self roundedControls:_btnRed];
+    [self roundedControls:_btnYellow];
+    [self roundedControls:_btnClearDrawing];
+    [self roundedControls:_btnBlue];
     [self Extrabuttons];
     
 }
@@ -204,37 +175,25 @@
 
 - (NSArray *)createDemoButtonArray {
     NSMutableArray *buttonsMutable = [[NSMutableArray alloc] init];
-
-
-    //facebook
-    UIButton *btnFacebook = [UIButton buttonWithType:UIButtonTypeSystem];
-    [btnFacebook setTitle:@"" forState:UIControlStateNormal];
-    btnFacebook.frame = CGRectMake(0.f, 0.f, 32.f, 32.f);
-    btnFacebook.tag = 0;
-    [btnFacebook addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
-    [buttonsMutable addObject:btnFacebook];
-    btnFacebook.layer.cornerRadius = btnFacebook.frame.size.width / 2;
-    btnFacebook.clipsToBounds = YES;
-    btnFacebook.layer.borderWidth = 1.0f;
-    btnFacebook.layer.borderColor = [UIColor greenColor].CGColor;
-    btnFacebook.backgroundColor = [UIColor yellowColor];
-    //Twitter
-    UIButton *btnTwitter = [UIButton buttonWithType:UIButtonTypeSystem];
-    [btnTwitter setTitle:@"" forState:UIControlStateNormal];
-    btnTwitter.frame = CGRectMake(0.f, 0.f, 32.f, 32.f);
-    btnTwitter.tag = 1;
-
-    [btnTwitter addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
-    [buttonsMutable addObject:btnTwitter];
-    btnTwitter.layer.cornerRadius = btnTwitter.frame.size.width / 2;
-    btnTwitter.clipsToBounds = YES;
-    btnTwitter.layer.borderWidth = 1.0f;
-    btnTwitter.layer.borderColor = [UIColor greenColor].CGColor;
-    btnTwitter.backgroundColor = [UIColor whiteColor];
-
-
-
+    [buttonsMutable addObject:[self addBubbleColorButtons:[UIColor yellowColor] btnID:0]];
+    [buttonsMutable addObject:[self addBubbleColorButtons:[UIColor whiteColor] btnID:1]];
+    [buttonsMutable addObject:[self addBubbleColorButtons:[UIColor magentaColor] btnID:2]];
     return [buttonsMutable copy];
+}
+
+
+-(UIButton*)addBubbleColorButtons:(UIColor*)colorValue btnID:(NSInteger)idValue{
+
+    UIButton* newBubbleButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [newBubbleButton setTitle:@"" forState:UIControlStateNormal];
+    newBubbleButton.frame = CGRectMake(0.f, 0.f, 32.f, 32.f);
+    newBubbleButton.tag = idValue;
+    
+    [newBubbleButton addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
+    [newBubbleButton setBackgroundColor:colorValue];
+    [self roundedControls:newBubbleButton];
+    return newBubbleButton;
+    
 }
 
 
@@ -265,6 +224,16 @@
     [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
     
     return button;
+}
+
+//Rounded buttons
+-(void)roundedControls:(UIButton*)sender{
+    UIButton* roundedButton = (UIButton*)sender;
+    roundedButton.layer.cornerRadius = roundedButton.frame.size.width / 2;
+    roundedButton.clipsToBounds = YES;
+    roundedButton.layer.borderWidth = 1.0f;
+    roundedButton.layer.borderColor = [UIColor greenColor].CGColor;
+    
 }
 
 
