@@ -10,6 +10,7 @@
 #import "DAScratchPadView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DWBubbleMenuButton.h"
+#import "SWRevealViewController.h"
 
 @interface DAViewController ()
 
@@ -46,6 +47,18 @@
     [self roundedControls:_btnClearDrawing];
     [self roundedControls:_btnBlue];
     [self Extrabuttons];
+    
+    
+    
+    // Change button color
+    _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _sidebarButton.target = self.revealViewController;
+    _sidebarButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
 }
 

@@ -30,6 +30,19 @@
 		4CA49E76175BD59800380086 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA49E75175BD59800380086 /* QuartzCore.framework */; };
 		8A4683931A8D1CCE00A81A3C /* eraser2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683911A8D1CCE00A81A3C /* eraser2.png */; };
 		8A4683941A8D1CCE00A81A3C /* eraser11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683921A8D1CCE00A81A3C /* eraser11.png */; };
+		8A708E5E1A94FBCD0029EB21 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E5D1A94FBCD0029EB21 /* SWRevealViewController.m */; };
+		8A708E8A1A94FCDC0029EB21 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E831A94FCDC0029EB21 /* MainViewController.m */; };
+		8A708E8B1A94FCDC0029EB21 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E851A94FCDC0029EB21 /* SidebarViewController.m */; };
+		8A708E8C1A94FCDC0029EB21 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E871A94FCDC0029EB21 /* MapViewController.m */; };
+		8A708E8D1A94FCDC0029EB21 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E891A94FCDC0029EB21 /* PhotoViewController.m */; };
+		8A708E961A95012D0029EB21 /* bag.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E8E1A95012D0029EB21 /* bag.png */; };
+		8A708E971A95012D0029EB21 /* teamslaay.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E8F1A95012D0029EB21 /* teamslaay.png */; };
+		8A708E981A95012D0029EB21 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E901A95012D0029EB21 /* Settings.png */; };
+		8A708E991A95012D0029EB21 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E911A95012D0029EB21 /* share.png */; };
+		8A708E9A1A95012D0029EB21 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E921A95012D0029EB21 /* information.png */; };
+		8A708E9B1A95012D0029EB21 /* nav_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E931A95012D0029EB21 /* nav_bg.png */; };
+		8A708E9C1A95012D0029EB21 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E941A95012D0029EB21 /* menu.png */; };
+		8A708E9D1A95012D0029EB21 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A708E951A95012D0029EB21 /* menu@2x.png */; };
 		8AD1AAF61A925B5900AE50AC /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1AAF51A925B5900AE50AC /* DWBubbleMenuButton.m */; };
 		8AFCDBF31A8BCB5F00C8D8E0 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */; };
 /* End PBXBuildFile section */
@@ -64,6 +77,24 @@
 		4CA49E75175BD59800380086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A4683911A8D1CCE00A81A3C /* eraser2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser2.png; sourceTree = "<group>"; };
 		8A4683921A8D1CCE00A81A3C /* eraser11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser11.png; sourceTree = "<group>"; };
+		8A708E5C1A94FBCD0029EB21 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8A708E5D1A94FBCD0029EB21 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8A708E821A94FCDC0029EB21 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8A708E831A94FCDC0029EB21 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		8A708E841A94FCDC0029EB21 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		8A708E851A94FCDC0029EB21 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		8A708E861A94FCDC0029EB21 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		8A708E871A94FCDC0029EB21 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8A708E881A94FCDC0029EB21 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		8A708E891A94FCDC0029EB21 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		8A708E8E1A95012D0029EB21 /* bag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bag.png; sourceTree = "<group>"; };
+		8A708E8F1A95012D0029EB21 /* teamslaay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teamslaay.png; sourceTree = "<group>"; };
+		8A708E901A95012D0029EB21 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		8A708E911A95012D0029EB21 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		8A708E921A95012D0029EB21 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information.png; sourceTree = "<group>"; };
+		8A708E931A95012D0029EB21 /* nav_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg.png; sourceTree = "<group>"; };
+		8A708E941A95012D0029EB21 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		8A708E951A95012D0029EB21 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		8AD1AAF41A925B5900AE50AC /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
 		8AD1AAF51A925B5900AE50AC /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
 		8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
@@ -90,7 +121,6 @@
 			children = (
 				8A4683911A8D1CCE00A81A3C /* eraser2.png */,
 				8A4683921A8D1CCE00A81A3C /* eraser11.png */,
-				4CA49E48175943D200380086 /* DAScratchPad */,
 				4CA49E281759439000380086 /* DrwApp */,
 				4CA49E211759439000380086 /* Frameworks */,
 				4CA49E201759439000380086 /* Products */,
@@ -120,6 +150,8 @@
 		4CA49E281759439000380086 /* DrwApp */ = {
 			isa = PBXGroup;
 			children = (
+				8A708E811A94FCC90029EB21 /* controllers */,
+				8A708E5F1A94FBE90029EB21 /* resouces */,
 				8A5A21261A8E719A00840611 /* Libraries */,
 				8AFCDBF21A8BCB5F00C8D8E0 /* main.storyboard */,
 				4CA49E311759439000380086 /* DAAppDelegate.h */,
@@ -161,15 +193,64 @@
 				4CA49E4A175943D200380086 /* DAScratchPadView.m */,
 			);
 			name = DAScratchPad;
-			path = ../DAScratchPad;
+			path = ../../DAScratchPad;
 			sourceTree = "<group>";
 		};
 		8A5A21261A8E719A00840611 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				4CA49E48175943D200380086 /* DAScratchPad */,
+				8A708E5B1A94FBC00029EB21 /* SWRevealViewController */,
 				8AD1AAF31A925B4C00AE50AC /* BubbleMenuButton */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		8A708E5B1A94FBC00029EB21 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A708E5C1A94FBCD0029EB21 /* SWRevealViewController.h */,
+				8A708E5D1A94FBCD0029EB21 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		8A708E5F1A94FBE90029EB21 /* resouces */ = {
+			isa = PBXGroup;
+			children = (
+				8A708E801A94FC000029EB21 /* images */,
+			);
+			name = resouces;
+			sourceTree = "<group>";
+		};
+		8A708E801A94FC000029EB21 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8A708E8E1A95012D0029EB21 /* bag.png */,
+				8A708E8F1A95012D0029EB21 /* teamslaay.png */,
+				8A708E901A95012D0029EB21 /* Settings.png */,
+				8A708E911A95012D0029EB21 /* share.png */,
+				8A708E921A95012D0029EB21 /* information.png */,
+				8A708E931A95012D0029EB21 /* nav_bg.png */,
+				8A708E941A95012D0029EB21 /* menu.png */,
+				8A708E951A95012D0029EB21 /* menu@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		8A708E811A94FCC90029EB21 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A708E821A94FCDC0029EB21 /* MainViewController.h */,
+				8A708E831A94FCDC0029EB21 /* MainViewController.m */,
+				8A708E841A94FCDC0029EB21 /* SidebarViewController.h */,
+				8A708E851A94FCDC0029EB21 /* SidebarViewController.m */,
+				8A708E861A94FCDC0029EB21 /* MapViewController.h */,
+				8A708E871A94FCDC0029EB21 /* MapViewController.m */,
+				8A708E881A94FCDC0029EB21 /* PhotoViewController.h */,
+				8A708E891A94FCDC0029EB21 /* PhotoViewController.m */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 		8AD1AAF31A925B4C00AE50AC /* BubbleMenuButton */ = {
@@ -233,14 +314,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A708E9A1A95012D0029EB21 /* information.png in Resources */,
+				8A708E971A95012D0029EB21 /* teamslaay.png in Resources */,
 				4C6E428C18E1FC22001EFA49 /* ETleft.jpg in Resources */,
+				8A708E981A95012D0029EB21 /* Settings.png in Resources */,
 				4C6E428D18E1FC22001EFA49 /* ETleftMirrored.jpg in Resources */,
 				8A4683941A8D1CCE00A81A3C /* eraser11.png in Resources */,
 				8A4683931A8D1CCE00A81A3C /* eraser2.png in Resources */,
+				8A708E991A95012D0029EB21 /* share.png in Resources */,
+				8A708E9C1A95012D0029EB21 /* menu.png in Resources */,
+				8A708E961A95012D0029EB21 /* bag.png in Resources */,
 				4C6E428A18E1FC22001EFA49 /* ETright.jpg in Resources */,
 				4CA49E2D1759439000380086 /* InfoPlist.strings in Resources */,
 				4C6E428818E1FC22001EFA49 /* ETdown.jpg in Resources */,
 				4CA49E351759439000380086 /* Default.png in Resources */,
+				8A708E9B1A95012D0029EB21 /* nav_bg.png in Resources */,
 				4CA49E371759439000380086 /* Default@2x.png in Resources */,
 				4CA49E391759439000380086 /* Default-568h@2x.png in Resources */,
 				4C6E428918E1FC22001EFA49 /* ETupMirrored.jpg in Resources */,
@@ -248,6 +336,7 @@
 				4C6E428E18E1FC22001EFA49 /* ETup.jpg in Resources */,
 				4C6E428B18E1FC22001EFA49 /* ETrightMirrored.jpg in Resources */,
 				4C6E429018E1FCB7001EFA49 /* ETdownMirrored.jpg in Resources */,
+				8A708E9D1A95012D0029EB21 /* menu@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +350,13 @@
 				8AD1AAF61A925B5900AE50AC /* DWBubbleMenuButton.m in Sources */,
 				4CA49E2F1759439000380086 /* main.m in Sources */,
 				4CA49E331759439000380086 /* DAAppDelegate.m in Sources */,
+				8A708E8C1A94FCDC0029EB21 /* MapViewController.m in Sources */,
+				8A708E8B1A94FCDC0029EB21 /* SidebarViewController.m in Sources */,
 				4CA49E3C1759439000380086 /* DAViewController.m in Sources */,
+				8A708E8A1A94FCDC0029EB21 /* MainViewController.m in Sources */,
 				4CA49E4B175943D200380086 /* DAScratchPadView.m in Sources */,
+				8A708E5E1A94FBCD0029EB21 /* SWRevealViewController.m in Sources */,
+				8A708E8D1A94FCDC0029EB21 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
