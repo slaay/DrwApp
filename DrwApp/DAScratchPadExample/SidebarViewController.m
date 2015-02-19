@@ -31,7 +31,10 @@
 {
     [super viewDidLoad];
 
-    menuItems = @[@"title", @"news", @"comments", @"map", @"calendar", @"wishlist"];
+    //These are the identifiers for each of the cell on the table view!
+    menuItems = @[@"Canvas", @"Settings", @"TeamSlaay", @"AboutApp", @"ThirdParty", @"Share"];
+    //Remove Extra empty cells at the bottom
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,12 +72,6 @@
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
     destViewController.title = [[menuItems objectAtIndex:indexPath.row] capitalizedString];
     
-    // Set the photo if it navigates to the PhotoView
-    if ([segue.identifier isEqualToString:@"showPhoto"]) {
-        PhotoViewController *photoController = (PhotoViewController*)segue.destinationViewController;
-        NSString *photoFilename = [NSString stringWithFormat:@"%@_photo.jpg", [menuItems objectAtIndex:indexPath.row]];
-        photoController.photoFilename = photoFilename;
-    }
     
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
         SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;

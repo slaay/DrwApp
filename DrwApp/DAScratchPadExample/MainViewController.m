@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 
-    self.title = @"News";
+    self.title = @"Canvas";
 
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];

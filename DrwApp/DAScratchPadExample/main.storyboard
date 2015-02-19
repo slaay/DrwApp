@@ -155,11 +155,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="DrwApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euh-Ho-4iQ">
-                                <rect key="frame" x="20" y="100" width="280" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                <rect key="frame" x="20" y="100" width="280" height="53"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="31"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drwApp.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ins-7d-kwI">
+                                <rect key="frame" x="44" y="156" width="256" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -207,7 +211,7 @@
                                     <constraint firstItem="74f-0y-8y9" firstAttribute="centerY" secondItem="73m-CF-6Im" secondAttribute="centerY" id="g54-zq-9oc"/>
                                 </constraints>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news" id="ZOI-hv-xTJ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Canvas" id="ZOI-hv-xTJ">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZOI-hv-xTJ" id="lkh-2p-Pgf">
@@ -220,7 +224,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0442DB8B-C0C4-49D1-A37B-90CD520B06E5" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-NW-NSn">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drwApp.png" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-NW-NSn">
                                             <rect key="frame" x="20" y="3" width="38" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -230,7 +234,7 @@
                                     <segue destination="bCK-WY-9JB" kind="custom" customClass="SWRevealViewControllerSegue" id="h26-es-XqJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="comments" id="ZTC-cf-e78">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings" id="ZTC-cf-e78">
                                 <rect key="frame" x="0.0" y="110" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZTC-cf-e78" id="9hp-eA-0c5">
@@ -250,7 +254,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="map" id="96f-CK-bVT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeamSlaay" id="96f-CK-bVT">
                                 <rect key="frame" x="0.0" y="154" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="96f-CK-bVT" id="HeT-K3-eV3">
@@ -270,7 +274,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="calendar" id="6s4-06-BBD">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutApp" id="6s4-06-BBD">
                                 <rect key="frame" x="0.0" y="198" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6s4-06-BBD" id="zCZ-f8-1aO">
@@ -290,7 +294,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="wishlist" id="YTm-V4-USl">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThirdParty" id="YTm-V4-USl">
                                 <rect key="frame" x="0.0" y="242" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YTm-V4-USl" id="CtJ-Hb-YGc">
@@ -304,6 +308,26 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bag.png" translatesAutoresizingMaskIntoConstraints="NO" id="miV-57-6DZ">
+                                            <rect key="frame" x="20" y="3" width="38" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Share" id="bSm-2V-bWg">
+                                <rect key="frame" x="0.0" y="286" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bSm-2V-bWg" id="hAz-Z0-yzf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Share" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v94-2F-9XQ">
+                                            <rect key="frame" x="66" y="7" width="144" height="30"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="25"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="nHQ-Uj-CkG">
                                             <rect key="frame" x="20" y="3" width="38" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -483,7 +507,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clear:" destination="fiF-ZS-T7f" eventType="touchUpInside" id="UIk-Ma-Jjp"/>
+                                    <action selector="clear:" destination="bCK-WY-9JB" eventType="touchUpInside" id="Zdu-aL-iAY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -510,28 +534,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0442DB8B-C0C4-49D1-A37B-90CD520B06E5" width="1024" height="1024">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGPD1YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
-GR4fJSYtMDY5VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
-V05TQ29sb3KAAoAMEiTAAACAA4AKXHsxMDI0LCAxMDI0fdIVChYYWk5TLm9iamVjdHOhF4AEgAnSFQoa
-GKIbHIAFgAaACRAF0yAKISIjJFdOUy5iYXNlW05TLnJlbGF0aXZlgACACIAHXxDXZmlsZTovLy9BcHBs
-aWNhdGlvbnMvWGNvZGUuYXBwL0NvbnRlbnRzL0RldmVsb3Blci9QbGF0Zm9ybXMvaVBob25lU2ltdWxh
-dG9yLnBsYXRmb3JtL0RldmVsb3Blci9MaWJyYXJ5L1hjb2RlL1ByaXZhdGVQbHVnSW5zL0lERUludGVy
-ZmFjZUJ1aWxkZXJDb2NvYVRvdWNoSW50ZWdyYXRpb24uaWRlcGx1Z2luL0NvbnRlbnRzL1Jlc291cmNl
-cy9JQlVJTWlzc2luZ0ltYWdlLnRpZmbSJygpKlokY2xhc3NuYW1lWCRjbGFzc2VzVU5TVVJMoissVU5T
-VVJMWE5TT2JqZWN00icoLi9XTlNBcnJheaIuLNMxMgozNDVXTlNXaGl0ZVxOU0NvbG9yU3BhY2VEMCAw
-ABADgAvSJyg3OFdOU0NvbG9yojcs0icoOjtXTlNJbWFnZaI6LF8QD05TS2V5ZWRBcmNoaXZlctE+P1Ry
-b290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJoAnwCqAKwArgCwALUA
-uAC6ALwAvgDAAMcAzwDbAN0A3wDhAbsBwAHLAdQB2gHdAeMB7AHxAfkB/AIDAgsCGAIdAh8CIQImAi4C
-MQI2Aj4CQQJTAlYCWwAAAAAAAAIBAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAJdA
-</mutableData>
-        </image>
         <image name="Settings.png" width="256" height="256"/>
         <image name="bag.png" width="256" height="256"/>
+        <image name="drwApp.png" width="256" height="256"/>
         <image name="eraser2.png" width="64" height="64"/>
         <image name="information.png" width="256" height="256"/>
         <image name="menu.png" width="28" height="20"/>
+        <image name="share.png" width="256" height="256"/>
         <image name="teamslaay.png" width="256" height="256"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
