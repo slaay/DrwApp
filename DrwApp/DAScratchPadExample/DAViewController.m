@@ -4,13 +4,20 @@
 //
 //  Created by David Levi on 5/31/13.
 //  Copyright (c) 2013 Double Apps Inc. All rights reserved.
-//
+//  share on Instagram
+// http://stackoverflow.com/questions/11393071/how-to-share-an-image-on-instagram-in-ios
 
 #import "DAViewController.h"
 #import "DAScratchPadView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DWBubbleMenuButton.h"
 #import "SWRevealViewController.h"
+#import "DASharedGlobals.h"
+#import "Twitter/Twitter.h"
+#import "Social/Social.h"
+
+
+
 
 @interface DAViewController ()
 
@@ -27,6 +34,7 @@
 - (IBAction)paint:(id)sender;
 - (IBAction)airbrush:(id)sender;
 - (IBAction)airbrushFlow:(id)sender;
+- (IBAction)socialShare:(id)sender;
 @end
 
 @implementation DAViewController
@@ -188,6 +196,7 @@
     [buttonsMutable addObject:[self addBubbleColorButtons:[UIColor yellowColor] btnID:0]];
     [buttonsMutable addObject:[self addBubbleColorButtons:[UIColor whiteColor] btnID:1]];
     [buttonsMutable addObject:[self addBubbleColorButtons:[UIColor magentaColor] btnID:2]];
+    [buttonsMutable addObject:[self addBubbleColorButtons:[UIColor orangeColor] btnID:3]];
     return [buttonsMutable copy];
 }
 
@@ -244,6 +253,133 @@
     roundedButton.layer.borderWidth = 1.0f;
     roundedButton.layer.borderColor = [UIColor greenColor].CGColor;
     
+}
+
+- (IBAction)socialShare:(id)sender {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
+                                                             delegate:self
+                                                    cancelButtonTitle:nil
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"Save to Camera Roll", @"Tweet it!", @"Facebook it!", @"Instagram it",  @"Cancel", nil];
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    UIImage *canvasImage = self.scratchPad.getSketch;
+    UIImageView *canvasImageView = [[UIImageView alloc] initWithImage:canvasImage];
+    
+    NSLog(@"Share button clicked %ld", (long)buttonIndex);
+    
+    if (buttonIndex == 3){
+        //Share on Intagram
+        NSLog(@"Share button clicked %ld = Instagram", (long)buttonIndex);
+        
+    } else
+        if (buttonIndex == 2){
+            //Share on facebook
+            NSLog(@"Share button clicked %ld = Facebook", (long)buttonIndex);
+            
+            if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+            {
+                SLComposeViewController *postSheet = [SLComposeViewController
+                                                       composeViewControllerForServiceType:SLServiceTypeFacebook];
+                if (postSheet){
+                    [postSheet addImage:[UIImage imageNamed:@"drwApp.png"]];
+                    [postSheet addURL:[NSURL URLWithString:LINK_SLaaySourcecoders]];
+                    [postSheet setInitialText:SHARE_text];
+                    
+                    [postSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+                        if (result == SLComposeViewControllerResultDone) {
+                            NSLog(@"Posted");
+                        } else if (result == SLComposeViewControllerResultCancelled) {
+                            NSLog(@"Post Cancelled");
+                        } else {
+                            NSLog(@"Post Failed");
+                        }
+                    }];
+                    
+                    [self presentViewController:postSheet animated:YES completion:nil];
+                    
+                }
+                
+                
+            } else {
+                if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
+                { SLComposeViewController *postSheet = [SLComposeViewController
+                                                         composeViewControllerForServiceType:SLServiceTypeFacebook];
+                    [postSheet setInitialText:SHARE_text];
+                    [self presentViewController:postSheet animated:YES completion:nil];
+                    //inform the user that no account is configured with alarm view.
+                }
+                
+            }
+            
+        } else
+            if (buttonIndex == 1)
+            {
+                //Share on Twitter.
+                NSLog(@"Share button clicked %ld = Twitter", (long)buttonIndex);
+                if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+                {
+                    SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                           composeViewControllerForServiceType:SLServiceTypeTwitter];
+                    if (tweetSheet){
+                        [tweetSheet addImage:[UIImage imageNamed:@"drwApp.png"]];
+                        [tweetSheet addURL:[NSURL URLWithString:LINK_SLaaySourcecoders]];
+                        [tweetSheet setInitialText:SHARE_text];
+                        
+                        [tweetSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+                            if (result == SLComposeViewControllerResultDone) {
+                                NSLog(@"Posted");
+                            } else if (result == SLComposeViewControllerResultCancelled) {
+                                NSLog(@"Post Cancelled");
+                            } else {
+                                NSLog(@"Post Failed");
+                            }
+                        }];
+                        
+                        [self presentViewController:tweetSheet animated:YES completion:nil];
+                        
+                    }
+                    
+                    
+                } else {
+                    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
+                    { SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                             composeViewControllerForServiceType:SLServiceTypeTwitter];
+                        [tweetSheet setInitialText:SHARE_text];
+                        [self presentViewController:tweetSheet animated:YES completion:nil];
+                        //inform the user that no account is configured with alarm view.
+                    }
+                    
+                }
+                
+            } else if(buttonIndex == 0) {
+                //Save to camera roll
+                NSLog(@"Share button clicked %ld = Camera roll", (long)buttonIndex);
+                UIGraphicsBeginImageContextWithOptions(canvasImageView.bounds.size, NO, 0.0);
+                [canvasImageView.image drawInRect:CGRectMake(0, 0, canvasImageView.frame.size.width, canvasImageView.frame.size.height)];
+                UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+            }
+
+
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    // Was there an error?
+    if (error != NULL)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image could not be saved.Please try again"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Image was successfully saved in photoalbum"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    }
 }
 
 

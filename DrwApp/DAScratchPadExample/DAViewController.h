@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DAViewController : UIViewController
+
+@interface DAViewController : UIViewController<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) IBOutlet UIButton *btnBlack;
 @property (strong, nonatomic) IBOutlet UIButton *btnRed;
