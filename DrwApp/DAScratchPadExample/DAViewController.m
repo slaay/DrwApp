@@ -145,7 +145,7 @@
 - (IBAction)airbrushFlow:(id)sender
 {
 	UISlider* slider = (UISlider*)sender;
-	self.scratchPad.airBrushFlow = slider.value;
+	self.scratchPad.airBrushFlow = slider.value; 
 }
 
 
