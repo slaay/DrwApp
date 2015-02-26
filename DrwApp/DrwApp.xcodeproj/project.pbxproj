@@ -32,6 +32,7 @@
 		8A4683931A8D1CCE00A81A3C /* eraser2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683911A8D1CCE00A81A3C /* eraser2.png */; };
 		8A4683941A8D1CCE00A81A3C /* eraser11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4683921A8D1CCE00A81A3C /* eraser11.png */; };
 		8A511FD31A99B5E900496DA9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A511FD21A99B5E900496DA9 /* Social.framework */; };
+		8A5C10A81A9F867B00B2E95B /* CHTumblrMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C10A71A9F867B00B2E95B /* CHTumblrMenuView.m */; };
 		8A708E5E1A94FBCD0029EB21 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E5D1A94FBCD0029EB21 /* SWRevealViewController.m */; };
 		8A708E8A1A94FCDC0029EB21 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E831A94FCDC0029EB21 /* MainViewController.m */; };
 		8A708E8B1A94FCDC0029EB21 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A708E851A94FCDC0029EB21 /* SidebarViewController.m */; };
@@ -89,6 +90,8 @@
 		8A4683921A8D1CCE00A81A3C /* eraser11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eraser11.png; path = ../eraser11.png; sourceTree = "<group>"; };
 		8A511FD11A99B3A200496DA9 /* DrwApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrwApp-Prefix.pch"; sourceTree = "<group>"; };
 		8A511FD21A99B5E900496DA9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8A5C10A61A9F867B00B2E95B /* CHTumblrMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTumblrMenuView.h; sourceTree = "<group>"; };
+		8A5C10A71A9F867B00B2E95B /* CHTumblrMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTumblrMenuView.m; sourceTree = "<group>"; };
 		8A708E5C1A94FBCD0029EB21 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8A708E5D1A94FBCD0029EB21 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		8A708E821A94FCDC0029EB21 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -228,11 +231,21 @@
 		8A5A21261A8E719A00840611 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8A5C10A51A9F866400B2E95B /* CHTumblrMenu */,
 				4CA49E48175943D200380086 /* DAScratchPad */,
 				8A708E5B1A94FBC00029EB21 /* SWRevealViewController */,
 				8AD1AAF31A925B4C00AE50AC /* BubbleMenuButton */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		8A5C10A51A9F866400B2E95B /* CHTumblrMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8A5C10A61A9F867B00B2E95B /* CHTumblrMenuView.h */,
+				8A5C10A71A9F867B00B2E95B /* CHTumblrMenuView.m */,
+			);
+			name = CHTumblrMenu;
 			sourceTree = "<group>";
 		};
 		8A708E5B1A94FBC00029EB21 /* SWRevealViewController */ = {
@@ -402,6 +415,7 @@
 				8A4322451A986BBB00A6EC0C /* DASharedGlobals.m in Sources */,
 				4CA49E4B175943D200380086 /* DAScratchPadView.m in Sources */,
 				8A708E5E1A94FBCD0029EB21 /* SWRevealViewController.m in Sources */,
+				8A5C10A81A9F867B00B2E95B /* CHTumblrMenuView.m in Sources */,
 				8A708E8D1A94FCDC0029EB21 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
