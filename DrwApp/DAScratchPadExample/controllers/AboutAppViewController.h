@@ -10,5 +10,6 @@
 
 @interface AboutAppViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *btnImg;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end
