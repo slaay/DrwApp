@@ -30,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self AddTumblerStyleMenuControls:_btnImg];
+    [self roundedControls:_btnImg];
     
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
@@ -52,29 +53,39 @@
 
 }
 
+//Rounded buttons
+-(void)roundedControls:(UIButton*)sender{
+    UIButton* roundedButton = (UIButton*)sender;
+    roundedButton.layer.cornerRadius = roundedButton.frame.size.width / 2;
+    roundedButton.clipsToBounds = YES;
+    roundedButton.layer.borderWidth = 1.0f;
+    roundedButton.layer.borderColor = [UIColor greenColor].CGColor;
+    
+}
+
 - (void)showMenu
 {
     CHTumblrMenuView *menuView = [[CHTumblrMenuView alloc] init];
-    [menuView addMenuItemWithTitle:@"Text" andIcon:[UIImage imageNamed:@"post_type_bubble_text.png"] andSelectedBlock:^{
-        NSLog(@"Text selected");
+    [menuView addMenuItemWithTitle:@"Facebook" andIcon:[UIImage imageNamed:@"Facebook.png"] andSelectedBlock:^{
+        NSLog(@"Facebook selected");
     }];
-    [menuView addMenuItemWithTitle:@"Photo" andIcon:[UIImage imageNamed:@"post_type_bubble_photo.png"] andSelectedBlock:^{
-        NSLog(@"Photo selected");
+    [menuView addMenuItemWithTitle:@"Twitter" andIcon:[UIImage imageNamed:@"Twitter.png"] andSelectedBlock:^{
+        NSLog(@"Twitter selected");
     }];
-    [menuView addMenuItemWithTitle:@"Quote" andIcon:[UIImage imageNamed:@"post_type_bubble_quote.png"] andSelectedBlock:^{
-        NSLog(@"Quote selected");
+    [menuView addMenuItemWithTitle:@"Instagram" andIcon:[UIImage imageNamed:@"instagram.png"] andSelectedBlock:^{
+        NSLog(@"Instagram selected");
         
     }];
-    [menuView addMenuItemWithTitle:@"Link" andIcon:[UIImage imageNamed:@"post_type_bubble_link.png"] andSelectedBlock:^{
-        NSLog(@"Link selected");
+    [menuView addMenuItemWithTitle:@"" andIcon:[UIImage imageNamed:@""] andSelectedBlock:^{
+        NSLog(@"blank selected");
         
     }];
-    [menuView addMenuItemWithTitle:@"Chat" andIcon:[UIImage imageNamed:@"post_type_bubble_chat.png"] andSelectedBlock:^{
-        NSLog(@"Chat selected");
+    [menuView addMenuItemWithTitle:@"Website" andIcon:[UIImage imageNamed:@"post_type_bubble_link.png"] andSelectedBlock:^{
+        NSLog(@"Website selected");
         
     }];
-    [menuView addMenuItemWithTitle:@"Video" andIcon:[UIImage imageNamed:@"post_type_bubble_video.png"] andSelectedBlock:^{
-        NSLog(@"Video selected");
+    [menuView addMenuItemWithTitle:@"" andIcon:[UIImage imageNamed:@""] andSelectedBlock:^{
+        NSLog(@"blank selected");
         
     }];
     
