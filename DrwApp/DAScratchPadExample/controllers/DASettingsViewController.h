@@ -11,6 +11,8 @@
 @interface DASettingsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITableView *tableViewSettings;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (strong, nonatomic) IBOutlet UISlider *sliderBrushSize;
+@property (strong, nonatomic) IBOutlet UISlider *sliderBrushTransparency;
 - (IBAction)brushSize:(id)sender;
 - (IBAction)brushTransparancy:(id)sender;
 @end

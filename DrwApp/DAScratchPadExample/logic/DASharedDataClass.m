@@ -56,4 +56,15 @@ static DASharedDataClass *BrushDetailsObject;
    shared.brushTransparency = BrushTransparency;
 }
 
++(void) setIsNewlyLoaded:(BOOL)isNewlyLoadedYESNO{
+    // Ensure we are using the shared instance
+    DASharedDataClass *shared = [DASharedDataClass sharedInstance];
+    shared.isNewlyLoaded = isNewlyLoadedYESNO;
+}
+
++(BOOL) getNewlyLoadedYESNO{
+    // Ensure we are using the shared instance
+    DASharedDataClass *shared = [DASharedDataClass sharedInstance];
+    return shared.isNewlyLoaded;
+}
 @end

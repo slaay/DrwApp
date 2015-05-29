@@ -12,17 +12,21 @@
     
     int brushSizeValue;
     int brushTransparency;
+    BOOL isNewlyLoaded;
 }
 
 @property(nonatomic) int  brushSizeValue;
 @property(nonatomic) int  brushTransparency;
+@property(nonatomic) BOOL isNewlyLoaded;
 
 
 +(DASharedDataClass *) SharedInstance;
 
-+(int)getTransparency;
-+(int)getBrushSize;
++(int) getTransparency;
++(int) getBrushSize;
 +(void) setBrushDetails:(int)brushSizeValue  brushTransparency:(int)brushTransparencyValue;
 +(void) setBrushSize:(int)BrushSize;
 +(void) setBrushTransparency:(int)BrushTransparency;
++(void) setIsNewlyLoaded:(BOOL)isNewlyLoadedYESNO;
++(BOOL) getNewlyLoadedYESNO;
 @end

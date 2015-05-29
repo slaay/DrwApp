@@ -8,6 +8,7 @@
 
 #import "DASettingsViewController.h"
 #import "SWRevealViewController.h"
+#import "DASharedDataClass.h"
 
 @interface DASettingsViewController ()
 
@@ -37,6 +38,24 @@
     _sidebarButton.action = @selector(revealToggle:);
     
     //self.tableViewSettings.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+   
+    if ([DASharedDataClass getNewlyLoadedYESNO] == NO) {
+        self.sliderBrushSize.minimumValue = 1;
+        self.sliderBrushSize.maximumValue = 100;
+        self.sliderBrushSize.minimumValue = 1;
+        self.sliderBrushTransparency.maximumValue = 100;
+        [DASharedDataClass setIsNewlyLoaded:YES]; //first time its here!
+    }
+    
+    self.sliderBrushSize.value = [DASharedDataClass getBrushSize];
+    self.sliderBrushTransparency.value = [DASharedDataClass getTransparency];
+    NSLog(@"I am in viewWillAppear - settings");
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,11 +78,11 @@
 
 - (IBAction)brushSize:(id)sender {
 	UISlider* slider = (UISlider*)sender;
-	// = slider.value;
+    [DASharedDataClass setBrushSize:slider.value];
 }
 
 - (IBAction)brushTransparancy:(id)sender {
 	UISlider* slider = (UISlider*)sender;
-	// = slider.value;
+    [DASharedDataClass setBrushTransparency:slider.value];
 }
 @end

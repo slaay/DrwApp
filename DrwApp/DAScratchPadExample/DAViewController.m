@@ -68,20 +68,27 @@
     _sidebarButton.action = @selector(revealToggle:);
     
     
-    self.sliderBrushSize.minimumValue = 1;
-    self.sliderBrushSize.maximumValue = 100;
-    self.sliderTransparency.minimumValue = 1;
-    self.sliderTransparency.maximumValue = 100;
-    
- //   [DASharedDataClass setBrushDetails:1 brushTransparency:0.5];
-    [DASharedDataClass setBrushSize:5];
-    [DASharedDataClass setBrushTransparency:50];
-    self.sliderBrushSize.value = [DASharedDataClass getBrushSize];
-    self.scratchPad.drawWidth = self.sliderBrushSize.value;
-    
-    self.sliderTransparency.value = [DASharedDataClass getTransparency];
-    self.scratchPad.drawOpacity = self.sliderTransparency.value;
+
 }
+
+
+- (void)viewWillAppear:(BOOL)animated {
+//    if ([DASharedDataClass getNewlyLoadedYESNO] == NO) {
+//        self.sliderBrushSize.minimumValue = 1;
+//        self.sliderBrushSize.maximumValue = 100;
+//        self.sliderTransparency.minimumValue = 1;
+//        self.sliderTransparency.maximumValue = 100;
+//        [DASharedDataClass setIsNewlyLoaded:YES]; //first time its here!
+//    }
+//    
+//    self.sliderBrushSize.value = [DASharedDataClass getBrushSize];
+//    self.scratchPad.drawWidth = self.sliderBrushSize.value;
+//    
+//    self.sliderTransparency.value = [DASharedDataClass getTransparency];
+//    self.scratchPad.drawOpacity = self.sliderTransparency.value;
+    NSLog(@"I am in viewWillAppear- canvas");
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -127,12 +134,14 @@
 {
 	UISlider* slider = (UISlider*)sender;
 	self.scratchPad.drawWidth = slider.value;
+    [DASharedDataClass setBrushSize:slider.value];
 }
 
 - (IBAction)setOpacity:(id)sender
 {
 	UISlider* slider = (UISlider*)sender;
 	self.scratchPad.drawOpacity = slider.value;
+    [DASharedDataClass setBrushTransparency:slider.value];
 }
 
 - (IBAction)clear:(id)sender

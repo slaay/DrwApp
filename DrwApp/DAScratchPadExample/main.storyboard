@@ -623,6 +623,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="sidebarButton" destination="e6g-Qb-EQv" id="b9d-Z3-7Fo"/>
+                        <outlet property="sliderBrushSize" destination="hR7-qt-hNz" id="Ssk-B3-AbP"/>
+                        <outlet property="sliderBrushTransparency" destination="Ug8-un-qVW" id="5gD-7H-i6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97o-6v-sYj" userLabel="First Responder" sceneMemberID="firstResponder"/>

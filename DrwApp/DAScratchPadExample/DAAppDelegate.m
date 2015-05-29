@@ -33,10 +33,10 @@
     
     
     
-    
-    
-    
-    
+    //   [DASharedDataClass setBrushDetails:1 brushTransparency:0.5];
+    [DASharedDataClass setBrushSize:5];
+    [DASharedDataClass setBrushTransparency:50];
+    [DASharedDataClass setIsNewlyLoaded:NO]; //first time its here!
     return YES;
 }
 
