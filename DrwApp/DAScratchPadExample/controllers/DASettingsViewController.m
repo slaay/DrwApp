@@ -36,11 +36,6 @@
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
-    
-    //self.tableViewSettings.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,7 +45,7 @@
         self.sliderBrushSize.maximumValue = 100;
         self.sliderBrushSize.minimumValue = 1;
         self.sliderBrushTransparency.maximumValue = 100;
-        [DASharedDataClass setIsNewlyLoaded:YES]; //first time its here!
+        [DASharedDataClass setIsNewlyLoaded:NO]; //first time its here!
     }
     
     self.sliderBrushSize.value = [DASharedDataClass getBrushSize];

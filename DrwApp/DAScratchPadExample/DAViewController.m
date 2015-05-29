@@ -59,34 +59,19 @@
     [self Extrabuttons];
     
     
-    
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
-    
-    
-
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
-//    if ([DASharedDataClass getNewlyLoadedYESNO] == NO) {
-//        self.sliderBrushSize.minimumValue = 1;
-//        self.sliderBrushSize.maximumValue = 100;
-//        self.sliderTransparency.minimumValue = 1;
-//        self.sliderTransparency.maximumValue = 100;
-//        [DASharedDataClass setIsNewlyLoaded:YES]; //first time its here!
-//    }
-//    
-//    self.sliderBrushSize.value = [DASharedDataClass getBrushSize];
-//    self.scratchPad.drawWidth = self.sliderBrushSize.value;
-//    
-//    self.sliderTransparency.value = [DASharedDataClass getTransparency];
-//    self.scratchPad.drawOpacity = self.sliderTransparency.value;
-    NSLog(@"I am in viewWillAppear- canvas");
+   self.scratchPad.drawWidth = [DASharedDataClass getBrushSize];
+   self.scratchPad.drawOpacity = [DASharedDataClass getTransparency];
+   NSLog(@"I am in viewWillAppear- canvas");
 }
 
 
@@ -128,20 +113,6 @@
 {
 	UIButton* button = (UIButton*)sender;
 	self.scratchPad.drawColor = button.backgroundColor;
-}
-
-- (IBAction)setWidth:(id)sender
-{
-	UISlider* slider = (UISlider*)sender;
-	self.scratchPad.drawWidth = slider.value;
-    [DASharedDataClass setBrushSize:slider.value];
-}
-
-- (IBAction)setOpacity:(id)sender
-{
-	UISlider* slider = (UISlider*)sender;
-	self.scratchPad.drawOpacity = slider.value;
-    [DASharedDataClass setBrushTransparency:slider.value];
 }
 
 - (IBAction)clear:(id)sender

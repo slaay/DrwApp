@@ -17,7 +17,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnGreen;
 @property (strong, nonatomic) IBOutlet UIButton *btnYellow;
 @property (strong, nonatomic) IBOutlet UIButton *btnClearDrawing;
-@property (strong, nonatomic) IBOutlet UISlider *sliderBrushSize;
-@property (strong, nonatomic) IBOutlet UISlider *sliderTransparency;
 
 @end
