@@ -7,8 +7,8 @@
 //
 
 #import "DAAppDelegate.h"
-
 #import "DAViewController.h"
+#import "DASharedDataClass.h"
 
 @implementation DAAppDelegate
 
@@ -28,6 +28,14 @@
                                                            [UIColor colorWithRed:10.0/255.0 green:10.0/255.0 blue:10.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"Helvetica-Light" size:21.0], NSFontAttributeName, nil]];
+    
+    
+    
+    
+    
+    
+    
+    
     
     return YES;
 }

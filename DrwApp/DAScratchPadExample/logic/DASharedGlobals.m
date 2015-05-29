@@ -8,6 +8,7 @@
 
 #import "DASharedGlobals.h"
 
+
 @implementation DASharedGlobals
     NSString *LINK_Faceboook = @"https://www.facebook.com/slaaysourcecoders";
     NSString *LINK_Twitter = @"";
@@ -17,4 +18,6 @@
     NSString *LINK_Github_Profile = @"https://github.com/slaay";
 
     NSString *SHARE_text = @"DrwApp is coOl";
+
+
 @end

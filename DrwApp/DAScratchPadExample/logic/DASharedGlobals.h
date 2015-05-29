@@ -16,7 +16,5 @@
     extern NSString *LINK_SLaaySourcecoders;
     extern NSString *LINK_SlaayFB_Profile;
     extern NSString *LINK_Github_Profile;
-
     extern NSString *SHARE_text;
-
 @end

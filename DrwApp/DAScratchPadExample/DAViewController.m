@@ -15,6 +15,8 @@
 #import "DASharedGlobals.h"
 #import "Twitter/Twitter.h"
 #import "Social/Social.h"
+#import "DASettingsViewController.h"
+#import "DASharedDataClass.h"
 
 
 
@@ -65,6 +67,20 @@
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
     
+    
+    self.sliderBrushSize.minimumValue = 1;
+    self.sliderBrushSize.maximumValue = 100;
+    self.sliderTransparency.minimumValue = 1;
+    self.sliderTransparency.maximumValue = 100;
+    
+ //   [DASharedDataClass setBrushDetails:1 brushTransparency:0.5];
+    [DASharedDataClass setBrushSize:5];
+    [DASharedDataClass setBrushTransparency:50];
+    self.sliderBrushSize.value = [DASharedDataClass getBrushSize];
+    self.scratchPad.drawWidth = self.sliderBrushSize.value;
+    
+    self.sliderTransparency.value = [DASharedDataClass getTransparency];
+    self.scratchPad.drawOpacity = self.sliderTransparency.value;
 }
 
 - (void)didReceiveMemoryWarning
